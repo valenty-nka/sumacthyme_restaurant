@@ -4,15 +4,14 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const photos = [
-  "../../assets/images/gallery1.jpg",
-  "../../assets/images/gallery2.jpg",
-  "../../assets/images/gallery5.jpg",
-  "../../assets/images/gallery3.jpg",
-  "../../assets/images/gallery4.jpg",
-  "../../assets/images/gallery6.jpg",
-  
-];
+import gallery1 from "../../assets/images/gallery1.jpg";
+import gallery2 from "../../assets/images/gallery2.jpg";
+import gallery3 from "../../assets/images/gallery3.jpg";
+import gallery4 from "../../assets/images/gallery4.jpg";
+import gallery5 from "../../assets/images/gallery5.jpg";
+import gallery6 from "../../assets/images/gallery6.jpg";
+
+const photos = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
 
 export default function Gallery() {
   return (
