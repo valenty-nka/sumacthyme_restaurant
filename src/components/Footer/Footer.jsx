@@ -1,5 +1,7 @@
 import React from "react";
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import FooterLogo from "../../assets/images/footer.png";
+
 
 export default function Footer() {
   return (
@@ -59,7 +61,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center mt-8">
           <img
-            src="/src/assets/images/footer.png"
+            src={FooterLogo}
             alt="Sumac Thyme Logo"
             className="w-36 md:w-48 h-auto"
           />
