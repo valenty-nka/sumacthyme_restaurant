@@ -5,12 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const photos = [
-  "/src/assets/images/gallery1.jpg",
-  "/src/assets/images/gallery2.jpg",
-  "/src/assets/images/gallery5.jpg",
-  "/src/assets/images/gallery3.jpg",
-  "/src/assets/images/gallery4.jpg",
-  "/src/assets/images/gallery6.jpg",
+  "../../assets/images/gallery1.jpg",
+  "../../assets/images/gallery2.jpg",
+  "../../assets/images/gallery5.jpg",
+  "../../assets/images/gallery3.jpg",
+  "../../assets/images/gallery4.jpg",
+  "../../assets/images/gallery6.jpg",
   
 ];
 
