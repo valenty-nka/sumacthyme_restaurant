@@ -1,0 +1,69 @@
+@import "@fontsource/nunito"; /* defaults to 400 regular */
+@import "@fontsource/nunito/600.css"; /* semi-bold */
+@import "@fontsource/nunito/700.css"; /* bold */
+@import "tailwindcss";
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: "Nunito", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #1D3956;
+  background-color: #e6dfd7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cinzel {
+  font-family: 'Cinzel', serif;
+
+}
+
+.beige{
+  color: #e6dfd7;
+}
+.dark-beige{
+  color: #a3755f;
+}
+
+.red{
+  color: #8A393F;
+}
+.blue-background{
+  background: #1D3956;
+}
+
+
+/* Change arrow color */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #8A393F !important; /* your brown color */
+  width: 2rem; 
+  height: 2rem;
+}
+
+/* Change hover effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #fff !important; /* optional: white on hover */
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background-color: #8A393F !important; /* brown color */
+  opacity: 0.7; /* optional */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #8A393F !important; /* active dot same color */
+  opacity: 1;
+}
+

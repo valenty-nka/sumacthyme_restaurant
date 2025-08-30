@@ -1,0 +1,33 @@
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: #e6dfd7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.loader-icon {
+  width: 80px;
+  height: 80px;
+  animation: spin 6s linear infinite; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading text */
+.loader-text {
+  margin-top: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #8A393F; 
+}
