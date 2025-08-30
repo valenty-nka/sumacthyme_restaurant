@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
-import Logo from "../assets/images/Logo.png";
+import Logo from "../../assets/images/Logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
