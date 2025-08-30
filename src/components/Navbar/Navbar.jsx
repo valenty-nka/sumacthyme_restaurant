@@ -88,7 +88,12 @@ export default function Navbar() {
           <Link
             to="/"
             className="text-2xl mt-16 hover:underline underline-offset-4 transition duration-300"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+    setIsOpen(false); // close the menu
+    if (window.location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top if already on main page
+    }
+  }}
           >
             Home
           </Link>
