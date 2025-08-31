@@ -26,6 +26,9 @@ export default function Hero() {
         <h1 className="text-white text-4xl md:text-6xl tracking-wide uppercase">
           Authentic Turkish Cuisine
         </h1>
+        <p className="mt-4 text-[#F1E3C6] text-lg md:text-xl font-semibold">
+          OPEN Mon - Sun: 9:00 AM – 9:30 PM
+        </p>
 
         {/* Call-to-action button */}
         <a
