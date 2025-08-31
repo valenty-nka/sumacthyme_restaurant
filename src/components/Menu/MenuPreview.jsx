@@ -15,7 +15,7 @@ const menuSections = [
     items: [
       { name: "Mutebbel", price: "$9.99" },
       { name: "Hummus", price: "$8.99" },
-      { name: "Carrot Tarator", price: "$10.99" },
+      { name: "Carrot Tarator", price: "$8.99" },
     ],
     photo: MezzesPhoto,
   },
@@ -24,8 +24,8 @@ const menuSections = [
     description: "Grilled meats, kebabs, wraps, and homemade specialties.",
     items: [
       { name: "Turkish Dumplings ‘Manti’", price: "$17.99" },
-      { name: "Adana Kebab", price: "$22.99" },
-      { name: "Chicken Kebab ‘Sis Tavuk’", price: "$23.99" },
+      { name: "Adana Kebab", price: "$23.99" },
+      { name: "Chicken Kebab ‘Sis Tavuk’", price: "$22.99" },
     ],
     photo: PlatesPhoto,
   },
@@ -33,9 +33,9 @@ const menuSections = [
     title: "Desserts & Beverages",
     description: "Sweet treats and drinks to finish your meal.",
     items: [
-      { name: "Baklava", price: "$6.99" },
-      { name: "Rice Pudding", price: "$5.99" },
-      { name: "Turkish Coffee", price: "$2.99" },
+      { name: "Baklava", price: "$4.49" },
+      { name: "Rice Pudding", price: "$6.99" },
+      { name: "Turkish Coffee", price: "$5.99" },
     ],
     photo: DessertsPhoto,
   },
