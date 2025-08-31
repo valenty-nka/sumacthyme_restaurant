@@ -40,9 +40,9 @@ const menuData = {
   ],
   "Desserts": [
     { name: "Carrot Slice Baklava", price: "$8.99" },
-    { name: "Pistachio Baklava", price: "$6.99" },
+    { name: "Pistachio Baklava", price: "$4.49" },
     { name: "Baklava with Ice Cream", price: "$11.99" },
-    { name: "Rice Pudding", price: "$4.49" },
+    { name: "Rice Pudding", price: "$6.99" },
   ],
   "Beverages": [
     { name: "Soft Drinks", price: "$2.99" },
