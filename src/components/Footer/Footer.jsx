@@ -2,7 +2,6 @@ import React from "react";
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import FooterLogo from "../../assets/images/footer.png";
 
-
 export default function Footer() {
   return (
     <footer className="bg-[#1D3956] py-24 px-6 text-white">
@@ -59,12 +58,16 @@ export default function Footer() {
         </div>
 
         {/* Logo */}
-        <div className="flex justify-center mt-8">
+        <div className="flex flex-col items-center mt-8 space-y-2">
           <img
             src={FooterLogo}
             alt="Sumac Thyme Logo"
             className="w-36 md:w-48 h-auto"
           />
+          {/* Opening hours under logo */}
+          <p className="text-gray-300 text-sm md:text-base">
+            MON – SUN, 9:00 AM – 9:30 PM
+          </p>
         </div>
 
         {/* Copyright */}
