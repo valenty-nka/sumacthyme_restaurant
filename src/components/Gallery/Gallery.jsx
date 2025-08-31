@@ -10,8 +10,10 @@ import gallery3 from "../../assets/images/gallery3.jpg";
 import gallery4 from "../../assets/images/gallery4.jpg";
 import gallery5 from "../../assets/images/gallery5.jpg";
 import gallery6 from "../../assets/images/gallery6.jpg";
+import gallery7 from "../../assets/images/gallery7.jpeg";
 
-const photos = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
+
+const photos = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7];
 
 export default function Gallery() {
   return (
