@@ -27,7 +27,7 @@ export default function Hero() {
           Authentic Turkish Cuisine
         </h1>
         <p className="mt-4 text-[#F1E3C6] text-lg md:text-xl font-semibold">
-          OPEN Tue - Fri: 10:30 AM – 9:00 PM <br/> Sat - Sun: 10:30 AM – 9:00 PM
+          OPEN Tue - Fri: 10:30 AM – 9:00 PM <br/> Sat - Sun: 9:00 AM – 9:00 PM
         </p>
 
         {/* Call-to-action button */}
