@@ -41,7 +41,7 @@ const menuSections = [
   },
   {
     title: "Breakfast",
-    description: "Our breakfast menu is available every day from 9:00AM-11:30AM.",
+    description: "Our breakfast menu is available Saturdays & Sundays from 9:00AM-11:30AM.",
     items: [
       { name: "Scrambled Eggs ‘Menemen’", price: "$10.99" },
       { name: "Eggs with Meat ‘Kıymalı Yumurta’", price: "$10.99" },

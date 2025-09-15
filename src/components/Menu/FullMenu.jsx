@@ -109,7 +109,7 @@ export default function FullMenu() {
 
                 {section === "Breakfast" && (
                   <p className="text-center italic mt-6 text-sm">
-                    Our breakfast menu is available every day from 9:00AM - 11:30AM. <br />
+                    Our breakfast menu is available Saturdays & Sundays from 9:00AM - 11:30AM. <br />
                     Please advise your server if you have food allergies or sensitivities.
                   </p>
                 )}
