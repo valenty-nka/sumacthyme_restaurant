@@ -43,6 +43,17 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-12 text-md font-medium uppercase">
+          <li>
+  <a
+    href="https://sumacandthyme.square.site/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#8A393F] text-white px-4 py-2 rounded-md hover:bg-[#733034] transition duration-300"
+  >
+    Order Now
+  </a>
+</li>
+
           <li onClick={() => {
       if (location.pathname === "/") scrollToTop();
       else navigate("/");
