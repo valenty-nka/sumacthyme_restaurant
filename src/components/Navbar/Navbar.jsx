@@ -122,6 +122,15 @@ export default function Navbar() {
           >
             Contact
           </button>
+          <a
+            href="https://sumacandthyme.square.site/"
+            target="_blank"
+            rel="noopener noreferrer"
+  className="border border-[#a3755f] text-[#a3755f] px-6 py-2 rounded-2xl text-lg mt-4 hover:bg-[#8A393F]/16 transition-colors duration-300"            onClick={() => setIsOpen(false)}
+          >
+          Order Now
+          </a>
+
 
           {/* Social Links */}
           <div className="flex justify-center items-center gap-6 mt-10 text-3xl">
