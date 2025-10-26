@@ -27,16 +27,29 @@ export default function Hero() {
           Authentic Turkish Cuisine
         </h1>
         <p className="mt-4 text-[#F1E3C6] text-lg md:text-xl font-semibold">
-          OPEN Tue - Fri: 10:30 AM – 9:00 PM <br/> Sat - Sun: 9:00 AM – 9:00 PM
+          OPEN Tue - Fri: 10:30 AM – 9:00 PM <br /> Sat - Sun: 9:00 AM – 9:00 PM
         </p>
 
-        {/* Call-to-action button */}
-        <a
-          href="#menu"
-          className="mt-8 px-6 py-3 bg-[#BE9A60] hover:bg-[#8A393F] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"
-        >
-          View Menu
-        </a>
+        {/* Buttons */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          {/* View Menu Button */}
+          <a
+            href="#menu"
+            className="px-6 py-3 bg-[#BE9A60] hover:bg-[#76592a] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"
+          >
+            View Menu
+          </a>
+
+          {/* Book Now Button */}
+          <a
+            href="https://app.squareup.com/appointments/book/kxtyzxqah83rrd/LJ09XNWW3KSTD/start"
+            target="_blank"
+            rel="nofollow"
+            className="px-9 py-3 bg-[#8A393F] hover:bg-[#5d2125] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"
+          >
+            Book Now
+          </a>
+        </div>
       </div>
     </section>
   );
