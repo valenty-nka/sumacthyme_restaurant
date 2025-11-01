@@ -99,7 +99,7 @@ export default function MenuPreview() {
       <div className="text-center mt-8">
         <button
           onClick={() => navigate("/menu")}
-          className="px-6 py-3 bg-[#BE9A60] text-white font-bold rounded-lg shadow-md hover:bg-[#8A393F] transition-colors duration-300"
+          className="px-6 py-3 bg-[#BE9A60] text-white font-bold rounded-lg shadow-md hover:bg-[#8A393F] transition-colors duration-300 cursor-pointer"
         >
           View Full Menu
         </button>
