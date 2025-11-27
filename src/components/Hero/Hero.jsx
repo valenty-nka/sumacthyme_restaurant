@@ -47,7 +47,7 @@ export default function Hero() {
             rel="nofollow"
             className="px-9 py-3 bg-[#8A393F] hover:bg-[#5d2125] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"
           >
-            Book Now
+            Book a Table
           </a>
         </div>
       </div>
