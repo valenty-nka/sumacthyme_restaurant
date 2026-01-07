@@ -1,8 +1,10 @@
-import React from "react";
 import HeroBg from "/src/assets/images/Hero.png";
 import HeroIcon from "/src/assets/images/SUN_svg.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative h-screen w-full" id="home">
       {/* Background Image */}
@@ -34,8 +36,8 @@ export default function Hero() {
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
           {/* View Menu Button */}
           <a
-            href="#menu"
-            className="px-6 py-3 bg-[#BE9A60] hover:bg-[#76592a] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"
+            onClick={() => navigate("/menu")}
+            className="cursor-pointer px-6 py-3 bg-[#BE9A60] hover:bg-[#76592a] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"
           >
             View Menu
           </a>

@@ -73,7 +73,7 @@ const menuData = {
 
 export default function FullMenu() {
   return (
-    <section className="bg-[#e6dfd7] min-h-screen py-16 px-6 md:px-20">
+    <section className="bg-[#e6dfd7] min-h-screen py-16 px-6 md:px-20 winter-menu">
       <h1
         className="text-center text-4xl cinzel mt-16 uppercase mb-12"
         style={{ color: "#a3755f" }}
@@ -105,7 +105,7 @@ export default function FullMenu() {
       )}
                 <div className="grid md:grid-cols-2 gap-6">
                   {menuData[section].map((item, i) => (
-                    <div key={i} className="flex justify-between border-b border-gray-300 pb-2">
+                    <div key={i} className="flex justify-between border-b border-white pb-2">
                       <div>
                         <p className="font-semibold uppercase">{item.name}</p>
                         {item.desc && (
