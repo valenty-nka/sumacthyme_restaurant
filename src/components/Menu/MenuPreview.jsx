@@ -12,9 +12,9 @@ const menuSections = [
     title: "Mezzes & Salads",
     description: "Individual servings of our fresh starters and salads.",
     items: [
-      { name: "Mutebbel", price: "$11.99" },
-      { name: "Hummus", price: "$8.99" },
-      { name: "Carrot Tarator", price: "$9.99" },
+      { name: "Mutebbel", price: "$13.99" },
+      { name: "Hummus", price: "$9.99" },
+      { name: "Carrot Tarator", price: "$12.99" },
     ],
     photo: MezzesPhoto,
   },
@@ -23,8 +23,8 @@ const menuSections = [
     description: "Grilled meats, kebabs, wraps, and homemade specialties.",
     items: [
       { name: "Kebab Wrap ‘Durum’", price: "$17.99" },
-      { name: "Adana Kebab", price: "$23.99" },
-      { name: "Chicken Kebab ‘Sis Tavuk’", price: "$22.99" },
+      { name: "Adana Kebab", price: "$24.99" },
+      { name: "Chicken Kebab ‘Sis Tavuk’", price: "$23.99" },
     ],
     photo: PlatesPhoto,
   },
@@ -32,8 +32,8 @@ const menuSections = [
     title: "Desserts & Beverages",
     description: "Sweet treats and drinks to finish your meal.",
     items: [
-      { name: "Pistachio Baklava", price: "$3.99" },
-      { name: "Cheesecake", price: "$12.49" },
+      { name: "Pistachio Baklava", price: "$7.99" },
+      { name: "Cheesecake", price: "$13.99" },
       { name: "Turkish Coffee", price: "$5.99" },
     ],
     photo: DessertsPhoto,
@@ -55,7 +55,10 @@ export default function MenuPreview() {
 
   return (
     <section className="container mx-auto my-16 px-4 w-full md:w-[70%]">
-      <h4 id="menu" className="text-center text-4xl my-16 scroll-mt-24 uppercase">
+      <h4
+        id="menu"
+        className="text-center text-4xl my-16 scroll-mt-24 uppercase"
+      >
         Our Menu
       </h4>
       {menuSections.map((section, index) => (

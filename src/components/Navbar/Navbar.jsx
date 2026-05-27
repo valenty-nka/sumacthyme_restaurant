@@ -14,56 +14,68 @@ export default function Navbar() {
     if (location.pathname !== "/") {
       navigate("/"); // go to main page first
       setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     } else {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
 
   const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  setIsOpen(false);
-};
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsOpen(false);
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#e6dfd7] shadow-md z-50 uppercase winter-menu">
+    <nav className="fixed top-0 left-0 w-full bg-[#e6dfd7] shadow-md z-50 uppercase">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
         <Link
-  to="/"
-  onClick={() => {
-    if (location.pathname === "/") scrollToTop();
-    else setIsOpen(false);
-  }}
->
+          to="/"
+          onClick={() => {
+            if (location.pathname === "/") scrollToTop();
+            else setIsOpen(false);
+          }}
+        >
           <img src={Logo} alt="logo" className="w-[150px] h-auto" />
         </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-12 text-md font-medium uppercase">
           <li>
-  <a
-    href="https://sumacandthyme.square.site/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#8A393F] text-white px-4 py-2 rounded-md hover:bg-[#733034] transition duration-300"
-  >
-    Order Now
-  </a>
-</li>
+            <a
+              href="https://sumacandthyme.square.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#8A393F] text-white px-4 py-2 rounded-md hover:bg-[#733034] transition duration-300"
+            >
+              Order Now
+            </a>
+          </li>
 
-          <li onClick={() => {
-      if (location.pathname === "/") scrollToTop();
-      else navigate("/");
-    }}>
-            <Link to="/" className="hover:underline underline-offset-4 transition duration-300">
+          <li
+            onClick={() => {
+              if (location.pathname === "/") scrollToTop();
+              else navigate("/");
+            }}
+          >
+            <Link
+              to="/"
+              className="hover:underline underline-offset-4 transition duration-300"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/menu" className="hover:underline underline-offset-4 transition duration-300">
+            <Link
+              to="/menu"
+              className="hover:underline underline-offset-4 transition duration-300"
+            >
               Menu
             </Link>
           </li>
@@ -86,7 +98,9 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div
         className={`md:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40 transition-opacity duration-500 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsOpen(false)}
       >
@@ -101,11 +115,11 @@ export default function Navbar() {
             to="/"
             className="text-2xl mt-16 hover:underline underline-offset-4 transition duration-300"
             onClick={() => {
-    setIsOpen(false); // close the menu
-    if (window.location.pathname === "/") {
-      window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top if already on main page
-    }
-  }}
+              setIsOpen(false); // close the menu
+              if (window.location.pathname === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top if already on main page
+              }
+            }}
           >
             Home
           </Link>
@@ -126,11 +140,11 @@ export default function Navbar() {
             href="https://sumacandthyme.square.site/"
             target="_blank"
             rel="noopener noreferrer"
-  className="border border-[#a3755f] text-[#a3755f] px-6 py-2 rounded-2xl text-lg mt-4 hover:bg-[#8A393F]/16 transition-colors duration-300"            onClick={() => setIsOpen(false)}
+            className="border border-[#a3755f] text-[#a3755f] px-6 py-2 rounded-2xl text-lg mt-4 hover:bg-[#8A393F]/16 transition-colors duration-300"
+            onClick={() => setIsOpen(false)}
           >
-          Order Now
+            Order Now
           </a>
-
 
           {/* Social Links */}
           <div className="flex justify-center items-center gap-6 mt-10 text-3xl">
