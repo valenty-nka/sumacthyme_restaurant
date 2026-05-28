@@ -151,7 +151,7 @@ const sections = [
 
   {
     id: "mains",
-    eyebrow: "From the charcoal",
+    eyebrow: "From the grill",
     title: "Kebabs & Mains",
     intro:
       "All skewers are grilled and served with rice, grilled vegetables, and warm flatbread.",
