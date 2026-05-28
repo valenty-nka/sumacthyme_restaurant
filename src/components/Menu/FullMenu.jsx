@@ -24,7 +24,7 @@ const sections = [
     eyebrow: "Cold to start",
     title: "Mezzes",
     intro:
-      "Small plates meant for the middle of the table. Served chilled with warm bread, and best when you don't ask before reaching.",
+      "Small plates meant for the middle of the table. Served chilled with warm bread.",
     image: mezzesImg,
     imageLabel: "// section photo · mezze spread",
     items: [
@@ -55,7 +55,7 @@ const sections = [
 
   {
     id: "salads",
-    eyebrow: "From the garden",
+    eyebrow: "Fresh and bright",
     title: "Salads",
     intro:
       "Fresh, bright, finished with pomegranate molasses or our house S&T dressing. A good companion to anything from the grill.",
@@ -88,8 +88,6 @@ const sections = [
     eyebrow: "Warm to share",
     title: "Hot Starters",
 
-    intro:
-      "A handful of warm bites that come straight from the stove. Order a few, share a few, dip a lot of bread.",
     image: starterImg,
     imageLabel: "// section photo · lentil soup, bread",
     items: [
@@ -156,7 +154,7 @@ const sections = [
     eyebrow: "From the charcoal",
     title: "Kebabs & Mains",
     intro:
-      "All skewers are grilled to order over charcoal and served with rice, grilled vegetables, and warm flatbread.",
+      "All skewers are grilled and served with rice, grilled vegetables, and warm flatbread.",
     image: kebabImg,
     imageLabel: "// section photo · skewers on the grill",
     items: [
@@ -220,7 +218,7 @@ const sections = [
     eyebrow: "Wrapped & ready",
     title: "Wraps & Handhelds",
     intro:
-      "Our charcoal-grilled fillings, rolled tight in fresh lavash. Make it a combo with fries and a soft drink for $6.99.",
+      "Our grilled fillings, rolled tight in fresh lavash. Make it a combo with fries and a soft drink for $6.99.",
     image: wrapImg,
     imageLabel: "// section photo · dürüm wrap, cut open",
     items: [
