@@ -566,8 +566,8 @@ export default function FullMenu() {
         </h1>
         <p className="lede">
           A walk through the warm corners of Turkish cooking — handmade mezze,
-          charcoal-grilled meats, and slow-simmered specialties from our chef's
-          hometown table.
+          grilled meats, and slow-simmered specialties from our chef's hometown
+          table.
         </p>
         <div className="ornament" aria-hidden="true">
           <span className="line" />
