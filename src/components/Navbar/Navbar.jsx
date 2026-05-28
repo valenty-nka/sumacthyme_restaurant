@@ -82,7 +82,7 @@ export default function Navbar() {
           <li>
             <button
               onClick={scrollToContact}
-              className="hover:underline underline-offset-4 uppercase transition duration-300"
+              className="hover:underline underline-offset-4 uppercase transition duration-300 cursor-pointer"
             >
               Contact
             </button>

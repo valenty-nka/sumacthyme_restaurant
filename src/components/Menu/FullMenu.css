@@ -1,0 +1,824 @@
+/* ──────────────────────────────────────────────────────────────────────
+   FullMenu.css
+   All rules scoped under .sumac-menu-page.
+
+   Palette: #e6dfd7, #a3755f, #8A393F, #1D3956
+   Fonts: Nunito (default) + .cinzel utility for headings
+   Sticky offset: --st-nav-offset (default 80, mobile 64 to match h-16)
+   ────────────────────────────────────────────────────────────────────── */
+
+.sumac-menu-page {
+  /* === Tunable === */
+  --st-nav-offset: 56px; /* height of your site nav (h-16 = 64px on mobile) */
+  --st-pillnav-height: 80px;
+  --st-nav-gap: 8px; /* small breathing space between site nav and pill nav */
+
+  /* Palette */
+  --st-bg: #e6dfd7;
+  --st-bg-card: #f1ebe2;
+  --st-bg-soft: #d8cfc2;
+  --st-red: #8a393f;
+  --st-red-deep: #6b2c31;
+  --st-dark-beige: #a3755f;
+  --st-dark-beige-light: #c19a85;
+  --st-navy: #1d3956;
+  --st-navy-deep: #1d3956;
+  --st-text: #2f2a26;
+  --st-text-muted: #7a6b5e;
+  --st-border: rgba(163, 117, 95, 0.18);
+  --st-border-soft: rgba(47, 42, 38, 0.1);
+  --st-shadow-sm: 0 2px 8px rgba(74, 38, 23, 0.06);
+  --st-shadow-md: 0 12px 32px rgba(74, 38, 23, 0.1);
+
+  background: var(--st-bg);
+  color: var(--st-text);
+  font-family:
+    "Nunito",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.5;
+  position: relative;
+
+  /* Defensive: prevent this wrapper from creating a containing block for
+     fixed-positioned ancestors (e.g. your top nav). We never set transform,
+     filter, perspective, backdrop-filter, contain, or will-change on it. */
+}
+
+.sumac-menu-page *,
+.sumac-menu-page *::before,
+.sumac-menu-page *::after {
+  box-sizing: border-box;
+}
+
+/* Add overall safety against any single element forcing horizontal scroll */
+.sumac-menu-page,
+.sumac-menu-page main,
+.sumac-menu-page .section,
+.sumac-menu-page .items,
+.sumac-menu-page .item,
+.sumac-menu-page .item-head {
+  min-width: 0;
+}
+
+/* ---------- Hero ---------- */
+.sumac-menu-page .menu-hero {
+  position: relative;
+  padding: 80px 40px 56px;
+  text-align: center;
+  z-index: 2;
+}
+.sumac-menu-page .menu-hero .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--st-dark-beige);
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+.sumac-menu-page .menu-hero .kicker .line {
+  width: 36px;
+  height: 1px;
+  background: var(--st-dark-beige);
+  opacity: 0.7;
+}
+.sumac-menu-page .menu-hero h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(40px, 7vw, 92px);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+.sumac-menu-page .menu-hero .hero-the {
+  color: var(--st-navy);
+}
+.sumac-menu-page .menu-hero .hero-menu {
+  color: var(--st-red);
+}
+.sumac-menu-page .menu-hero .lede {
+  max-width: 580px;
+  margin: 26px auto 0;
+  font-size: 16px;
+  color: var(--st-text-muted);
+  line-height: 1.65;
+}
+.sumac-menu-page .menu-hero .ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 28px auto 0;
+  color: var(--st-dark-beige);
+}
+.sumac-menu-page .menu-hero .ornament .line {
+  width: 60px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+.sumac-menu-page .menu-hero .ornament .dot {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+.sumac-menu-page .menu-hero .ornament .diamond {
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+/* ---------- Sticky pill nav ---------- */
+.sumac-menu-page .pill-nav-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(var(--st-nav-offset) + var(--st-nav-gap));
+  z-index: 25;
+  background: var(--st-bg);
+  padding: 12px 24px 16px;
+  isolation: isolate;
+}
+.sumac-menu-page .pill-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 6px;
+  background: var(--st-bg-card);
+  border: 1px solid var(--st-border-soft);
+  border-radius: 999px;
+  box-shadow: var(--st-shadow-sm);
+  scrollbar-width: none;
+}
+.sumac-menu-page .pill-nav::-webkit-scrollbar {
+  display: none;
+}
+.sumac-menu-page .pill-nav a {
+  flex: 0 0 auto;
+  padding: 9px 16px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--st-text-muted);
+  text-decoration: none;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.sumac-menu-page .pill-nav a:hover {
+  color: var(--st-navy);
+  background: rgba(29, 57, 86, 0.06);
+}
+.sumac-menu-page .pill-nav a.active {
+  background: var(--st-navy);
+  color: var(--st-bg);
+}
+
+/* ---------- Main grid ---------- */
+.sumac-menu-page .menu-shell {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 64px;
+}
+.sumac-menu-page .menu-main {
+  min-width: 0;
+}
+
+/* ---------- Section ---------- */
+.sumac-menu-page .section {
+  margin-bottom: 80px;
+  scroll-margin-top: calc(
+    var(--st-nav-offset) + var(--st-nav-gap) + var(--st-pillnav-height) + 16px
+  );
+}
+.sumac-menu-page .section:last-child {
+  margin-bottom: 0;
+}
+
+.sumac-menu-page .section-header {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.sumac-menu-page .section-image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--st-bg-soft);
+  box-shadow: var(--st-shadow-md);
+}
+.sumac-menu-page .section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.sumac-menu-page .section-image.is-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(138, 57, 63, 0.05) 0 8px,
+    rgba(163, 117, 95, 0.06) 8px 16px
+  );
+}
+.sumac-menu-page .section-image.is-placeholder::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--st-text-muted);
+  text-transform: uppercase;
+  background: linear-gradient(to top, rgba(47, 42, 38, 0.08), transparent 40%);
+}
+
+.sumac-menu-page .section-meta {
+  min-width: 0;
+}
+.sumac-menu-page .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--st-dark-beige);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.sumac-menu-page .section-eyebrow .num {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(163, 117, 95, 0.14);
+  color: var(--st-dark-beige);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.sumac-menu-page .section h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--st-navy);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+.sumac-menu-page .section h2 .tr {
+  display: inline-block;
+  margin-left: 14px;
+  font-size: 0.45em;
+  color: var(--st-red);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  text-transform: none;
+  font-style: italic;
+  opacity: 0.9;
+  font-family: "Nunito", sans-serif;
+}
+.sumac-menu-page .section-intro {
+  margin: 14px 0 0;
+  max-width: 540px;
+  color: var(--st-text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ---------- Item grid ---------- */
+.sumac-menu-page .items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 48px;
+}
+.sumac-menu-page .item-group {
+  margin-top: 28px;
+}
+.sumac-menu-page .item-group:first-child {
+  margin-top: 0;
+}
+.sumac-menu-page .item-group-label {
+  margin: 0 0 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--st-dark-beige);
+  font-weight: 700;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--st-border-soft);
+}
+
+.sumac-menu-page .item {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--st-border-soft);
+}
+.sumac-menu-page .item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: nowrap;
+}
+.sumac-menu-page .item-name {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--st-navy);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.sumac-menu-page .item-leader {
+  flex: 1 1 auto;
+  border-bottom: 1px dotted rgba(47, 42, 38, 0.25);
+  margin: 0 4px 6px;
+  min-width: 16px;
+  align-self: flex-end;
+}
+.sumac-menu-page .item-price {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--st-red);
+  letter-spacing: 0.02em;
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.sumac-menu-page .item-desc {
+  margin: 0;
+  font-size: 14px;
+  color: var(--st-text-muted);
+  line-height: 1.6;
+  max-width: 92%;
+  overflow-wrap: break-word;
+}
+.sumac-menu-page .item-note {
+  color: var(--st-red);
+  font-style: italic;
+}
+
+/* Badges */
+.sumac-menu-page .badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.sumac-menu-page .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+.sumac-menu-page .badge-veg {
+  color: #3d6b3a;
+  background: rgba(96, 144, 80, 0.14);
+  border: 1px solid rgba(96, 144, 80, 0.3);
+}
+.sumac-menu-page .badge-veg::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #5e8a4a;
+  border-radius: 50%;
+}
+.sumac-menu-page .badge-spicy {
+  color: var(--st-red);
+  background: rgba(138, 57, 63, 0.1);
+  border: 1px solid rgba(138, 57, 63, 0.25);
+}
+.sumac-menu-page .badge-pick {
+  color: #7a5340;
+  background: rgba(163, 117, 95, 0.18);
+  border: 1px solid rgba(163, 117, 95, 0.45);
+}
+.sumac-menu-page .badge-new {
+  color: var(--st-navy);
+  background: rgba(29, 57, 86, 0.1);
+  border: 1px solid rgba(29, 57, 86, 0.25);
+}
+.sumac-menu-page .item:hover .item-name {
+  color: var(--st-red);
+}
+.sumac-menu-page .item:hover .item-leader {
+  border-color: var(--st-dark-beige);
+}
+
+/* ---------- Aside ---------- */
+.sumac-menu-page .menu-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(
+    var(--st-nav-offset) + var(--st-nav-gap) + var(--st-pillnav-height) + 16px
+  );
+  align-self: start;
+  max-height: calc(
+    100vh - var(--st-nav-offset) - var(--st-pillnav-height) - 40px
+  );
+  overflow-y: auto;
+  scrollbar-width: thin;
+  min-width: 0;
+}
+.sumac-menu-page .menu-aside::-webkit-scrollbar {
+  width: 6px;
+}
+.sumac-menu-page .menu-aside::-webkit-scrollbar-thumb {
+  background: rgba(163, 117, 95, 0.3);
+  border-radius: 3px;
+}
+.sumac-menu-page .aside-card {
+  background: var(--st-bg-card);
+  border: 1px solid var(--st-border-soft);
+  border-radius: 6px;
+  padding: 24px;
+  box-shadow: var(--st-shadow-sm);
+  min-width: 0;
+}
+.sumac-menu-page .aside-card h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: var(--st-dark-beige);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-left: 3px solid var(--st-red);
+  padding-left: 14px;
+}
+.sumac-menu-page .aside-card .sub {
+  margin: 6px 0 18px 17px;
+  font-size: 12px;
+  color: var(--st-text-muted);
+  letter-spacing: 0.04em;
+}
+.sumac-menu-page .addon-row {
+  display: flex;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dotted rgba(47, 42, 38, 0.18);
+  gap: 8px;
+  min-width: 0;
+}
+.sumac-menu-page .addon-row:last-child {
+  border-bottom: none;
+}
+.sumac-menu-page .addon-name {
+  font-size: 14px;
+  color: var(--st-navy);
+  font-weight: 600;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.sumac-menu-page .addon-leader {
+  flex: 1 1 auto;
+  border-bottom: 1px dotted rgba(47, 42, 38, 0.2);
+  margin: 0 4px 6px;
+  align-self: flex-end;
+}
+.sumac-menu-page .addon-price {
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  color: var(--st-red);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.sumac-menu-page .info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.sumac-menu-page .info-list li {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--st-text);
+  line-height: 1.5;
+  min-width: 0;
+}
+.sumac-menu-page .info-list .ico {
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(163, 117, 95, 0.14);
+  color: var(--st-dark-beige);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.sumac-menu-page .info-list strong {
+  color: var(--st-navy);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sumac-menu-page .info-list li > span:last-child {
+  color: var(--st-text-muted);
+  font-size: 13px;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* ---------- Divider ---------- */
+.sumac-menu-page .divider {
+  height: 1px;
+  background: var(--st-border-soft);
+  margin: 56px auto;
+  max-width: 100%;
+}
+
+/* ---------- Bottom CTA ---------- */
+.sumac-menu-page .bottom-cta {
+  position: relative;
+  z-index: 2;
+  margin: 40px auto 0;
+  max-width: 1280px;
+  padding: 0 40px 80px;
+}
+.sumac-menu-page .cta-card {
+  background: var(--st-navy);
+  color: var(--st-bg);
+  padding: 48px 56px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--st-shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.sumac-menu-page .cta-card h3 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.sumac-menu-page .cta-card p {
+  margin: 0;
+  color: rgba(230, 223, 215, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.sumac-menu-page .cta-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+.sumac-menu-page .cta-btn {
+  padding: 14px 26px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s ease;
+}
+.sumac-menu-page .cta-btn.primary {
+  background: #be9a60;
+  color: var(--st-bg);
+}
+.sumac-menu-page .cta-btn.primary:hover {
+  background: #76592a;
+}
+.sumac-menu-page .cta-btn.secondary {
+  background: transparent;
+  color: var(--st-bg);
+  border: 1px solid #a3755f;
+}
+.sumac-menu-page .cta-btn.secondary:hover {
+  background: rgba(230, 223, 215, 0.1);
+}
+
+/* ──────────────────────────────────────────────────────────────────────
+   MOBILE — 960px and below
+   ────────────────────────────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .sumac-menu-page {
+    /* Your nav is h-16 = 64px. Tune if your mobile nav changes. */
+    --st-nav-offset: 60px;
+    --st-pillnav-height: 64px;
+    --st-nav-gap: 4px;
+  }
+
+  /* Hero — tighter on mobile */
+  .sumac-menu-page .menu-hero {
+    padding: 76px 20px 24px;
+  }
+  .sumac-menu-page .menu-hero .kicker {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+  }
+  .sumac-menu-page .menu-hero .lede {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+
+  /* Pill nav — smaller on mobile */
+  .sumac-menu-page .pill-nav-wrap {
+    padding: 8px 16px 12px;
+  }
+  .sumac-menu-page .pill-nav a {
+    padding: 8px 14px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+  .sumac-menu-page .pill-nav-wrap {
+    /* Re-assert sticky in the media query to guard against specificity issues */
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(var(--st-nav-offset) + var(--st-nav-gap));
+  }
+
+  /* Layout */
+  .sumac-menu-page .menu-shell {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 20px 20px 48px;
+  }
+
+  /* Aside drops into normal flow */
+  .sumac-menu-page .menu-aside {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Section header — meta FIRST on mobile, image SECOND (smaller) */
+  .sumac-menu-page .section {
+    margin-bottom: 56px;
+  }
+  .sumac-menu-page .section-header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .sumac-menu-page .section-meta {
+    order: 1;
+  }
+  .sumac-menu-page .section-image {
+    order: 2;
+    aspect-ratio: 21 / 9;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+  .sumac-menu-page .section h2 {
+    font-size: 32px;
+    letter-spacing: 0.03em;
+  }
+  .sumac-menu-page .section h2 .tr {
+    display: block;
+    margin-left: 0;
+    margin-top: 6px;
+    font-size: 16px;
+  }
+  .sumac-menu-page .section-intro {
+    font-size: 14px;
+  }
+
+  /* Items: single column, no dotted leader, allow shrinking */
+  .sumac-menu-page .items {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .sumac-menu-page .item {
+    padding: 16px 0;
+  }
+  .sumac-menu-page .item-head {
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+  }
+  .sumac-menu-page .item-leader {
+    display: none;
+  }
+  .sumac-menu-page .item-name {
+    font-size: 15px;
+    letter-spacing: 0.06em;
+  }
+  .sumac-menu-page .item-price {
+    font-size: 15px;
+    margin-left: auto; /* push price to the right when on same row */
+  }
+
+  /* Badges: drop to their own line on very narrow screens */
+  .sumac-menu-page .badges {
+    margin-left: 0;
+    width: 100%; /* force badges onto own line below name+price */
+    margin-top: 4px;
+  }
+
+  /* CTA */
+  .sumac-menu-page .cta-card {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    gap: 20px;
+  }
+  .sumac-menu-page .cta-card h3 {
+    font-size: 26px;
+  }
+  .sumac-menu-page .cta-actions {
+    justify-content: flex-start;
+  }
+  .sumac-menu-page .bottom-cta {
+    padding: 0 20px 48px;
+  }
+}
+
+/* Very narrow phones (≤380px) — extra tightening */
+@media (max-width: 380px) {
+  .sumac-menu-page .menu-shell {
+    padding: 16px 14px 40px;
+  }
+  .sumac-menu-page .menu-hero {
+    padding: 40px 14px 20px;
+  }
+  .sumac-menu-page .pill-nav-wrap {
+    padding: 8px 12px 10px;
+  }
+  .sumac-menu-page .pill-nav a {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+  .sumac-menu-page .section h2 {
+    font-size: 28px;
+  }
+  .sumac-menu-page .item-name {
+    font-size: 14px;
+  }
+  .sumac-menu-page .item-price {
+    font-size: 14px;
+  }
+  .sumac-menu-page .item-desc {
+    font-size: 13px;
+  }
+}
