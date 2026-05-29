@@ -1,20 +1,29 @@
 import React from "react";
-import { FaInstagram, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import FooterLogo from "../../assets/images/footer.png";
 
 export default function Footer() {
   return (
     <footer className="bg-[#1D3956] py-24 px-6 text-white">
       <div className="max-w-3xl mx-auto text-center space-y-8">
-
         {/* Heading */}
-        <h3 id="contact" className=" text-3xl md:text-5xl font-cinzel uppercase tracking-wider">
+        <h3
+          id="contact"
+          className=" text-3xl md:text-5xl font-cinzel uppercase tracking-wider"
+        >
           Catering & Inquiries
         </h3>
 
         {/* Descriptive text */}
         <p className="text-lg md:text-xl text-gray-200">
-         For catering or general questions, feel free to contact us via email, phone, or social media.
+          For catering or general questions, feel free to contact us via email,
+          phone, or social media.
         </p>
 
         {/* Contact Info */}
@@ -66,14 +75,15 @@ export default function Footer() {
           />
           {/* Opening hours under logo */}
           <p className="text-gray-300 text-sm md:text-base">
-            Tue - Sun: 11 AM – 9:00 PM <br/> Mon: closed
+            Tue - Sat: 11:30 AM – 9:00 PM <br /> Sun: 8:30 AM - 9 PM <br />{" "}
+            Breakfast Sun: 8:30 AM - 12 PM <br /> Mon: closed
           </p>
         </div>
 
         {/* Copyright */}
         <p className="text-gray-300 text-sm md:text-base mt-6">
-          Sumac&Thyme Turkish Cuisine Restaurant. <br/> 
-          &copy; {new Date().getFullYear()}  All rights reserved.
+          Sumac&Thyme Turkish Cuisine Restaurant. <br />
+          &copy; {new Date().getFullYear()} All rights reserved.
         </p>
       </div>
     </footer>
