@@ -628,7 +628,7 @@ export default function FullMenu() {
                   <br />
                   Sun · 8:30 AM – 9 PM
                   <br />
-                  Brekfast Sun · 8:30 AM – 12 PM
+                  Breakfast Sun · 8:30 AM – 12 PM
                   <br />
                   Closed Mondays
                 </span>
