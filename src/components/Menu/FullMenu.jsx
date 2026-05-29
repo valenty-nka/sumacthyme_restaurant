@@ -6,7 +6,7 @@ import saladImg from "../../assets/images/gallery/gallery4.jpg";
 import starterImg from "../../assets/images/gallery/gallery12.jpg";
 import kebabImg from "../../assets/images/gallery/gallery6.jpg";
 import drinkImg from "../../assets/images/gallery/gallery3.jpg";
-import lunchboxImg from "../../assets/images/gallery/gallery16.jpg";
+import lunchboxImg from "../../assets/images/gallery/gallery16.jpeg";
 import dessertImg from "../../assets/images/gallery/gallery17.jpg";
 import wrapImg from "../../assets/images/gallery/gallery18.jpeg";
 
@@ -624,7 +624,11 @@ export default function FullMenu() {
                 <span className="ico">◐</span>
                 <span>
                   <strong>Hours</strong>
-                  Tue – Sun · 11 AM – 9 PM
+                  Tue – Sat · 11:30 AM – 9 PM
+                  <br />
+                  Sun · 8:30 AM – 9 PM
+                  <br />
+                  Brekfast Sun · 8:30 AM – 12 PM
                   <br />
                   Closed Mondays
                 </span>
