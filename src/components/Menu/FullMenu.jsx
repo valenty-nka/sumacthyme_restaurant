@@ -9,6 +9,7 @@ import drinkImg from "../../assets/images/gallery/gallery3.jpg";
 import lunchboxImg from "../../assets/images/gallery/gallery16.jpeg";
 import dessertImg from "../../assets/images/gallery/gallery17.jpg";
 import wrapImg from "../../assets/images/gallery/gallery18.jpeg";
+import breakfastImg from "../../assets/images/gallery/gallery19.jpeg";
 
 /* ──────────────────────────────────────────────────────────────────────
    MENU DATA
@@ -19,6 +20,60 @@ import wrapImg from "../../assets/images/gallery/gallery18.jpeg";
    ────────────────────────────────────────────────────────────────────── */
 
 const sections = [
+  {
+    id: "breakfast",
+    eyebrow: "Sunday mornings",
+    title: "Breakfast",
+    translation: "— Kahvaltı",
+    intro:
+      "A slow, generous start to Sunday — eggs done the Turkish way, or the full Serpme spread with everything on the table at once. Available Sundays, 8:30 AM – 12:00 PM.",
+    image: breakfastImg,
+    imageLabel: "// section photo · turkish breakfast spread",
+    groups: [
+      {
+        label: "Eggs",
+        items: [
+          {
+            name: "Menemen",
+            price: "$15.99",
+            desc: "Eggs scrambled with tomatoes, peppers, and onions, served with bread.",
+            badges: [{ kind: "veg" }],
+          },
+          {
+            name: "Sucuklu Yumurta",
+            price: "$15.99",
+            desc: "Fried eggs with sucuk (Turkish garlic sausage), served with bread.",
+          },
+          {
+            name: "Kıymalı Yumurta",
+            price: "$15.99",
+            desc: "Eggs scrambled with seasoned ground beef, served with bread.",
+          },
+        ],
+      },
+      {
+        label: "Serpme Kahvaltı — Authentic Turkish Breakfast",
+        items: [
+          {
+            name: "Per Person",
+            price: "$29.99",
+            desc: "Two cheeses, honey, olives, Nutella, jam, dried fruits, spring rolls, tomatoes, cucumbers, pişi (fried dough), french fries with sauce, walnuts, and unlimited Turkish tea — with your choice of eggs.",
+            badges: [{ kind: "pick", label: "Signature" }],
+          },
+          {
+            name: "For 2 People",
+            price: "$59.99",
+            desc: "The full Serpme spread for two, with two choices of eggs.",
+          },
+          {
+            name: "For 4 People",
+            price: "$99.99",
+            desc: "The full Serpme spread for the table, including all three types of eggs.",
+          },
+        ],
+      },
+    ],
+  },
   {
     id: "mezzes",
     eyebrow: "Cold to start",
