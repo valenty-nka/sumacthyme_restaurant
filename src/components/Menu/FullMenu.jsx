@@ -28,7 +28,7 @@ const sections = [
     intro:
       "A slow, generous start to Sunday — eggs done the Turkish way, or the full Serpme spread with everything on the table at once. Available Sundays, 8:30 AM – 12:00 PM.",
     image: breakfastImg,
-    imageLabel: "// section photo · turkish breakfast spread",
+    imageLabel: "// section photo · menemen breakfast",
     groups: [
       {
         label: "Eggs",
@@ -681,9 +681,9 @@ export default function FullMenu() {
                   <strong>Hours</strong>
                   Tue – Sat · 11:30 AM – 9 PM
                   <br />
-                  Sun · 8:30 AM – 9 PM
+                  Sun · 10 AM – 9 PM
                   <br />
-                  Breakfast Sun · 8:30 AM – 12 PM
+                  Breakfast Sun · 10 AM – 12 PM
                   <br />
                   Closed Mondays
                 </span>
