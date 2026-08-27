@@ -674,11 +674,7 @@ export default function FullMenu() {
                 <span className="ico">◐</span>
                 <span>
                   <strong>Hours</strong>
-                  Tue – Sat · 11:30 AM – 9 PM
-                  <br />
-                  Sun · 10 AM – 9 PM
-                  <br />
-                  Breakfast Sun · 10 AM – 12 PM
+                  Tue – Sun · 11:30 AM – 9 PM
                   <br />
                   Closed Mondays
                 </span>
@@ -720,7 +716,7 @@ export default function FullMenu() {
           </div>
           <div className="cta-actions">
             <a
-              href="https://app.squareup.com/appointments/book/kxtyzxqah83rrd/LJ09XNWW3KSTD/start"
+              href="https://eatapp.co/reserve/sumac-thyme-authentic-turkish-cuisine-68-king-street"
               className="cta-btn primary rounded-lg"
             >
               Book a Table
