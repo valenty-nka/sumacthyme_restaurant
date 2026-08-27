@@ -29,8 +29,7 @@ export default function Hero() {
           Authentic Turkish Cuisine
         </h1>
         <p className="mt-4 text-[#F1E3C6] text-lg md:text-xl font-semibold">
-          OPEN Tue - Sat: 11:30 AM – 9:00 PM <br /> Sun: 10 AM - 9 PM <br />{" "}
-          Breakfast Sun: 10 AM - 12 PM <br /> Mon: closed
+          OPEN Tue - Sun: 11:30 AM – 9:00 PM <br /> Mon: closed
         </p>
 
         {/* Buttons */}
@@ -45,7 +44,7 @@ export default function Hero() {
 
           {/* Book Now Button */}
           <a
-            href="https://app.squareup.com/appointments/book/kxtyzxqah83rrd/LJ09XNWW3KSTD/start"
+            href="https://eatapp.co/reserve/sumac-thyme-authentic-turkish-cuisine-68-king-street"
             target="_blank"
             rel="nofollow"
             className="px-9 py-3 bg-[#8A393F] hover:bg-[#5d2125] text-[#e6dfd7] font-semibold rounded-lg shadow-md transition-all duration-300"

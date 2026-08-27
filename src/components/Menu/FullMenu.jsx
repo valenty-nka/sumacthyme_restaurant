@@ -229,11 +229,6 @@ const sections = [
         desc: "Grilled chicken thighs served with sides.",
       },
       {
-        name: "Beef Kebap",
-        price: "$23.99",
-        desc: "Skewer of grilled beef kebap with garlic and parsley, served with sides.",
-      },
-      {
         name: "Kebap on Mutebbel “Ali Nazik”",
         price: "$26.99",
         desc: "Lamb kebap grilled and served on a bed of mutebbel and sides.",
