@@ -9,22 +9,22 @@ import BreakfastPhoto from "/src/assets/images/breakfast.jpg";
 
 const menuSections = [
   {
-    title: "Mezzes & Salads",
-    description: "Individual servings of our fresh starters and salads.",
+    title: "Cold Dips & Salads",
+    description: "Traditional Turkish dips with warm lavash, and fresh salads.",
     items: [
-      { name: "Mutebbel", price: "$13.99" },
+      { name: "Mütebbel", price: "$13.99" },
       { name: "Hummus", price: "$9.99" },
-      { name: "Carrot Tarator", price: "$12.99" },
+      { name: "Çoban Salad", price: "$15.99" },
     ],
     photo: MezzesPhoto,
   },
   {
-    title: "Plates & Handhelds",
-    description: "Grilled meats, kebabs, wraps, and homemade specialties.",
+    title: "From the Grill",
+    description: "Grilled kebabs, Turkish classics, and homemade specialties.",
     items: [
-      { name: "Kebab Wrap ‘Durum’", price: "$17.99" },
-      { name: "Adana Kebab", price: "$24.99" },
-      { name: "Chicken Kebab ‘Sis Tavuk’", price: "$23.99" },
+      { name: "Turkish Kebap ‘Adana’", price: "$24.99" },
+      { name: "Chicken Kebap ‘Şiş Tavuk’", price: "$23.99" },
+      { name: "Kebap on Mütebbel ‘Ali Nazik’", price: "$26.99" },
     ],
     photo: PlatesPhoto,
   },
@@ -38,16 +38,6 @@ const menuSections = [
     ],
     photo: DessertsPhoto,
   },
-  // {
-  //   title: "Breakfast",
-  //   description: "Our breakfast menu is available Saturdays & Sundays from 9:00AM-11:30AM.",
-  //   items: [
-  //     { name: "Scrambled Eggs ‘Menemen’", price: "$12.99" },
-  //     { name: "Eggs with Meat ‘Kıymalı Yumurta’", price: "$13.99" },
-  //     { name: "Eggs with Turkish Sausage ‘Sucuklu Yumurta’", price: "$13.99" },
-  //   ],
-  //   photo: BreakfastPhoto,
-  // },
 ];
 
 export default function MenuPreview() {
