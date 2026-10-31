@@ -75,7 +75,7 @@ export default function Footer() {
           />
           {/* Opening hours under logo */}
           <p className="text-gray-300 text-sm md:text-base">
-            Tue - Sun: 11:30 AM – 9:00 PM <br /> Mon: closed
+            Tue - Sun: 11:30 AM – 8:00 PM <br /> Mon: closed
           </p>
         </div>
 

@@ -674,7 +674,7 @@ export default function FullMenu() {
                 <span className="ico">◐</span>
                 <span>
                   <strong>Hours</strong>
-                  Tue – Sun · 11:30 AM – 9 PM
+                  Tue – Sun · 11:30 AM – 8 PM
                   <br />
                   Closed Mondays
                 </span>
